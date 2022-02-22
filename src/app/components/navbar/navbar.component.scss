@@ -11,10 +11,10 @@ nav {
     justify-content: space-between;
     background-color: var(--primary);
     height: 100%;
-    // align-items: center;
 }
 
 a {
+    overflow: hidden;
     flex: 1 1 0;
     color: var(--text);
     padding: 10px;
@@ -24,8 +24,16 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     div {
+        transition: $dur $trans ;
+        position: absolute;
+        transform: translateX(200px);
+    }
+
+    span {
+        font-size: 36px;
         transition: $dur $trans ;
     }
 }
@@ -37,17 +45,20 @@ a {
 a:hover {
     transition: $trans $dur;
     background-color: var(--danger);
+
+    div {
+        transform: translateX(30px);
+    }
+
+    span {
+        transform: translateX(-40px);
+    }
+
 }
 
 p {
     padding: 0;
 }
-
-a:hover div {
-    transform: scale(1.2) rotateZ(1deg);
-    transition: $trans $dur;
-}
-
 
 @media (min-width: 1024px) {
     nav {
@@ -60,5 +71,9 @@ a:hover div {
         flex: none;
         padding: 20px;
         font-size: 1.25em;
+        
+        div {
+            transform: translateX(160px);
+        }
     }
 }
