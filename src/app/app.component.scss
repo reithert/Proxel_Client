@@ -11,17 +11,19 @@ main {
 
 app-header {
   grid-area: header;
-//   background-color: var(--primary);
+  background-color: var(--background);
 }
 
-.test2 {
+
+.main-content {
   grid-area: main;
-  font-family: 'Open Sans', sans-serif;
-  padding: 20px;
-  max-width: 800px;
-
-  //   background-color: var(--danger);
+  background-color: var(--background);
 }
+
+router-outlet {
+  display: none;
+}
+
 
 app-navbar {
   grid-area: navbar;
