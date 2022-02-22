@@ -1,0 +1,39 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 2fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "navbar";
+  height: 100vh;
+}
+
+app-header {
+  grid-area: header;
+//   background-color: var(--primary);
+}
+
+.test2 {
+  grid-area: main;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px;
+  max-width: 800px;
+
+  //   background-color: var(--danger);
+}
+
+app-navbar {
+  grid-area: navbar;
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas:
+      "header navbar"
+      "main navbar";
+  }
+
+}
