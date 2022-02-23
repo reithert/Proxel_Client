@@ -11,7 +11,19 @@ a {
     transition: all 500ms;
 }
 
+span {
+    // letter-spacing: 0;
+    display: inline-block;
+    transition: transform 500ms;
+}
+
 a:hover {
     letter-spacing: 10px;
     transition: all 500ms;
+
+    span {
+        transition: transform 500ms;
+        transform:  rotateZ(-45deg) translateY(-3px);
+    }
 }
+
