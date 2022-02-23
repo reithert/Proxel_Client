@@ -17,9 +17,8 @@ select {
     outline: none;
     padding: 5px;
     font-family: var(--font-primary);
+    text-align: center;
 }
-
-
 
 input {
     color: var(--text);
@@ -29,6 +28,8 @@ input {
     font-family: var(--font-primary);
     transition: all 350ms;
     color: black;
+    background-color: transparent;
+    padding: 5px;
 }
 
 input:focus {
@@ -45,15 +46,25 @@ button {
     padding: 5px 15px;
     box-shadow: 3px 3px 10px var(--text);
     background-color: var(--text);
-    align-self: flex-end;
     transition: all 250ms;
-
 }
 
-button:hover {
-    transition: all 250ms;
-    transform: rotateZ(2.5deg);
+@media (min-width: 1024px) {
+        button {
+            align-self: flex-end;
+        }
+
+        button:hover {
+            transition: all 250ms;
+            transform: rotateZ(2.5deg);
+        }
+
+        select {
+            text-align: left;
+        }
 }
+
+
 
 button:active {
     transition: all 100ms;
@@ -66,4 +77,23 @@ button:active {
     background-color: var(--primary);
     border-radius: 10px;
     color: var(--text);
+    overflow: scroll;
+    max-height: 300px;
 }
+
+.response::-webkit-scrollbar {
+    background-color: transparent;
+    width: 20px;
+}
+
+.response::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.response::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--text);
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
