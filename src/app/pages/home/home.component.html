@@ -1,13 +1,10 @@
 <div class="container">
   <select>
-    <option value="">Peppermint</option>
-    <option value="">Fedora</option>
-    <option value="">Windows</option>
+    <option *ngFor="let node of nodes" value="">{{node.name}} \ {{node.operatingSystem}}</option>
   </select>
   <input type="text" [(ngModel)]="payload"/>
   <button (click)="executeRequest()" >Submit</button>
   <div class="response">
-    <p>{{payload}}</p>
     <p>{{response}}</p>
   </div>
 </div>

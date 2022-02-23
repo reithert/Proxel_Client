@@ -8,12 +8,20 @@ import { Observable, throwError } from 'rxjs';
 })
 export class ProxelService {
 
-  private proxelEndpoint = "https://swapi.dev/api/planets/"
+  private proxelEndpoint = "https://proxel-server.herokuapp.com/"
 
   constructor(private http: HttpClient) { }
 
-  public executeRequest(id: number) {
-    return this.http.get(this.proxelEndpoint + id);
+  public executeRequest(request: any) {
+    return this.http.post(this.proxelEndpoint + "node", request);
+  }
+
+  public getPlanet(id: number) {
+    return this.http.get("https://swapi.dev/api/planets/"+id);
+  }
+
+  public getNodes() {
+    return this.http.get(this.proxelEndpoint+"node");
   }
 
 }
