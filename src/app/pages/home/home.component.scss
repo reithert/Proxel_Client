@@ -64,8 +64,6 @@ button {
         }
 }
 
-
-
 button:active {
     transition: all 100ms;
     // transform: rotateY(180deg);
@@ -77,8 +75,9 @@ button:active {
     background-color: var(--primary);
     border-radius: 10px;
     color: var(--text);
-    overflow: scroll;
+    overflow-y: scroll;
     max-height: 300px;
+    white-space: pre-wrap;
 }
 
 .response::-webkit-scrollbar {
