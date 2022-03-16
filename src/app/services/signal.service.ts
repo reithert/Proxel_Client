@@ -7,8 +7,12 @@ import * as signalR from '@microsoft/signalr';
 })
 export class SignalService {
 
-  private connection = new signalR.HubConnectionBuilder()
-    .withUrl("https://localhost:7261/nodehub")
+  // private connection = new signalR.HubConnectionBuilder()
+  //   .withUrl("https://localhost:7261/nodehub")
+  //   .build();     
+    
+    private connection = new signalR.HubConnectionBuilder()
+    .withUrl("https://proxel-server.herokuapp.com/nodehub")
     .build();   
 
   public output = new Subject<string>(); 
