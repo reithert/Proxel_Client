@@ -1,10 +1,10 @@
 <div class="container">
-  <select>
-    <option *ngFor="let node of nodes" value="">{{node.name}} \ {{node.operatingSystem}}</option>
+  <select [(ngModel)]="hostname">
+    <option *ngFor="let node of nodes" value="{{node.connectionID}}">{{node.hostName}} \ {{node.os}}</option>
   </select>
-  <input type="text" [(ngModel)]="payload"/>
+  <input type="text" (keyup.enter)="executeRequest()" [(ngModel)]="payload"/>
   <button (click)="executeRequest()" >Submit</button>
-  <div class="response">
+  <div class="response"  #scrollMe [scrollTop]="scrollMe.scrollHeight">
     <p>{{response}}</p>
   </div>
 </div>
