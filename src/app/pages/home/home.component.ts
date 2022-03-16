@@ -41,5 +41,9 @@ export class HomeComponent implements OnInit {
     });
 
     this.payload = "";
+
+    this.proxelService.getNodes().subscribe(data => {
+      this.nodes = data;
+    });
   }
 }

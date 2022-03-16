@@ -1,6 +1,6 @@
 <div class="container">
   <select [(ngModel)]="hostname">
-    <option *ngFor="let node of nodes" value="{{node.connectionID}}">{{node.hostName}} \ {{node.os}}</option>
+    <option *ngFor="let node of nodes; let i = index" value="{{node.connectionID}}">{{node.hostName}} \ {{node.os}}</option>
   </select>
   <input type="text" (keyup.enter)="executeRequest()" [(ngModel)]="payload"/>
   <button (click)="executeRequest()" >Submit</button>
