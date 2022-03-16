@@ -7,8 +7,8 @@ import { Observable, throwError } from 'rxjs';
 })
 export class ProxelService {
 
-  // private proxelEndpoint = "https://proxel-server.herokuapp.com/"
-  private proxelEndpoint = "https://localhost:7261/"
+  private proxelEndpoint = "https://proxel-server.herokuapp.com/"
+  // private proxelEndpoint = "https://localhost:7261/"
 
   constructor(private http: HttpClient) { }
 
