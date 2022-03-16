@@ -16,10 +16,6 @@ export class ProxelService {
     return this.http.post(this.proxelEndpoint + "node", request);
   }
 
-  public getPlanet(id: number) {
-    return this.http.get("https://swapi.dev/api/planets/"+id);
-  }
-
   public getNodes() {
     return this.http.get(this.proxelEndpoint+"node");
   }
