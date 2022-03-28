@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { LogsComponent } from './pages/logs/logs.component'
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms'
     AppComponent,
     NavbarComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LogsComponent
   ],
   imports: [
     BrowserModule,
